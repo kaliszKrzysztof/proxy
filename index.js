@@ -14,23 +14,23 @@ app.use(morgan('dev'));
 
 
 app.use(
-  "/proxy-private",
+  "/api",
   createProxyMiddleware({
     target: PRIVATE_API_URL,
     changeOrigin: true,
     pathRewrite: {
-      [`^/proxy-private`]: "",
+      [`^/api`]: "",
     },
   })
 );
 
 app.use(
-  "/proxy-public",
+  "/api-public",
   createProxyMiddleware({
     target: PUBLIC_API_URL,
     changeOrigin: true,
     pathRewrite: {
-      [`^/proxy-public`]: "",
+      [`^/api-public`]: "",
     },
   })
 );
