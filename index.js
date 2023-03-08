@@ -5,7 +5,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const app = express();
 app.use(cors());
-const PORT = 3001;
+const PORT = 3000;
 const HOST = "localhost";
 const PRIVATE_API_URL = "https://g3czeu5yof.execute-api.us-west-1.amazonaws.com/prod/";
 const PUBLIC_API_URL = 'https://o6w9tgek4l.execute-api.us-west-1.amazonaws.com/prod/';
